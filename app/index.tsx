@@ -1,32 +1,32 @@
 import CustomButton from "@/components/CustomButton";
-import { useState } from "react";
-import { Button, Text, TextInput, View } from "react-native";
+import CustomForm from '@/components/CustomForm';
+import CustomInput from '@/components/CustomInput';
+import CustomText from '@/components/CustomText';
+import CustomView from '@/components/CustomView';
+import { useRouter } from 'expo-router';
+import { useState } from 'react';
 
 export default function AppIndex()
 {
-    const [peso, setPeso] = useState('');
-    const [altura, setAltura] = useState('');
-    const [imc, setImc] = useState('');
-    const calcular = () => setImc(String(Number(peso) / Number(altura) / Number(altura)));
+    const router = useRouter();
+    const [nome, setNome] = useState('');
+
+    function entrar_no_sistema()
+    {
+        if (true)
+        {
+            sessionStorage.setItem('nome', nome)
+            router.push('/calculos');
+        }
+    }
+
     return (
-        <View>
-            <CustomButton texto='oi' click={() => null}></CustomButton>
-            <Text>digite seu peso</Text>
-
-            <TextInput onChangeText={setPeso}></TextInput>
-
-            <Text>digite sua </Text>
-
-            <TextInput onChangeText={setAltura}></TextInput>
-
-            <Text>seu peso {peso} quilos</Text>
-
-            <Text>sua altura {altura} metros</Text>
-
-            <Button title='calcular' onPress={calcular}></Button>
-
-            <Text>{imc}</Text>
-
-        </View>
+        <CustomView>
+            <CustomForm>
+                <CustomText>Digite o Seu Nome</CustomText>
+                <CustomInput onChangeText={setNome}></CustomInput>
+                <CustomButton texto='Entrar no Sistema' click={entrar_no_sistema}></CustomButton>
+            </CustomForm>
+        </CustomView>
     )
 }
