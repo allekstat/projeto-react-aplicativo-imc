@@ -1,5 +1,6 @@
+import React from 'react';
 import { ReactNode } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 
 interface Atributos
 {
@@ -12,6 +13,7 @@ export default function CustomView({children}: Atributos)
     {
         View:
         {
+            backgroundColor: 'rgba(0, 0, 0, 0.03)',
             display: 'flex',
             justifyContent: 'center',
             alignItems: 'center',

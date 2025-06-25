@@ -1,3 +1,4 @@
+import React from 'react';
 import { ReactNode } from 'react';
 import { StyleSheet, View } from 'react-native';
 
@@ -12,7 +13,8 @@ export default function CustomForm({children}: Atributos)
     {
         View:
         {
-            backgroundColor: 'pink',
+            backgroundColor: 'white',
+            boxShadow: '0 0 3rem 0rem rgba(0, 0, 0, 0.3)',
             marginHorizontal: 'auto',
             paddingHorizontal: 'auto',
             margin: 8,

@@ -4,6 +4,7 @@ import CustomInput from '@/components/CustomInput';
 import CustomText from '@/components/CustomText';
 import CustomView from '@/components/CustomView';
 import { useRouter } from 'expo-router';
+import React from "react";
 import { useEffect, useState } from 'react';
 
 export default function AppIndex()
