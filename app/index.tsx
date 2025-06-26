@@ -76,7 +76,7 @@ export default function AppIndex()
                 <CustomText>Digite sua Altura (centímetros)</CustomText>
                 <CustomInput onChangeText={x => {setAltura(x); setImc('')}}></CustomInput>
                 <CustomButton texto='Calcular IMC' click={calcular}></CustomButton>
-                <CustomText style={{color: cor, textShadow: '1px 0 1px black, 0.7px 0.7px 1px black, 0 1px 1px black, -0.7px 0.7px 1px black, -1px 0 1px black, -0.7px -0.7px 1px black, 0 -1px 1px black, 0.7px -0.7px 1px black'}}>{imc ? `Seu IMC é ${imc} - ${classificacao}` : ''}</CustomText>
+                <CustomText style={{color: cor, letterSpacing: '0.5rem', textShadow: '1px 0 1px black, 0.7px 0.7px 1px black, 0 1px 1px black, -0.7px 0.7px 1px black, -1px 0 1px black, -0.7px -0.7px 1px black, 0 -1px 1px black, 0.7px -0.7px 1px black'}}>{imc ? `Seu IMC é ${imc} - ${classificacao}` : ''}</CustomText>
             </CustomForm>
         </CustomView>
     )
