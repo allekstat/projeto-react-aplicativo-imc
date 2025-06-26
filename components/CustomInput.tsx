@@ -17,7 +17,9 @@ export default function CustomInput({onChangeText, children}: Atributos)
             marginHorizontal: 'auto',
             margin: 8,
             padding: 8,
-            borderRadius: 8
+            borderRadius: 8,
+            borderColor: 'aqua',
+            borderWidth: 2 // define a espessura da borda
         }
     });
 
