@@ -6,7 +6,8 @@ import CustomView from '@/components/CustomView';
 import { useRouter } from 'expo-router';
 import React from "react";
 import { useState } from 'react';
-
+import { View } from 'react-native';
+    
 export default function AppIndex()
 {
     const router = useRouter();
@@ -19,14 +20,16 @@ export default function AppIndex()
             sessionStorage.setItem('nome', nome)
             router.push('/calculos');
         }
-    }
+    }   
 
     return (
         <CustomView>
             <CustomForm>
                 <CustomText>Digite o Seu Nome</CustomText>
-                <CustomInput onChangeText={setNome}></CustomInput>
-                <CustomButton texto='Entrar no Sistema' click={entrar_no_sistema}></CustomButton>
+                <CustomInput onChangeText={setNome}></CustomInput>                                
+              <View style={{ alignItems: 'center' }}>
+                <CustomButton style={{ width: 250 }} texto='Entrar no Sistema' click={entrar_no_sistema} />
+              </View>      
             </CustomForm>
         </CustomView>
     )
