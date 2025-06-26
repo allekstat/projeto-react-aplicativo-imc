@@ -27,7 +27,7 @@ export default function AppIndex()
             Alert.alert('Erro', 'Altura Inválida', [{text: 'OK', }]);
             return;
         }
-        setImc(String(10000 * Number(peso) / Number(altura) / Number(altura)));
+        setImc(String((10000 * Number(peso) / Number(altura) / Number(altura)).toLocaleString('pt-BR')));
     }
     return (
         <CustomView>
