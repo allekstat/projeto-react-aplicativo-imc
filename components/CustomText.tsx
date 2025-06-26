@@ -4,9 +4,10 @@ import { StyleSheet, Text } from 'react-native';
 interface Atributos
 {
     children?: string | string[];
+    style?: any;
 }
 
-export default function CustomText({children}: Atributos)
+export default function CustomText({children, style}: Atributos)
 {
     const estilo = StyleSheet.create(
     {
@@ -14,12 +15,13 @@ export default function CustomText({children}: Atributos)
         {
             fontFamily: 'system-ui',
             fontSize: 20,
-            textAlign: 'center'
+            textAlign: 'center',
+            ...style
         }
     });
 
     return (
-        <Text style={estilo.Text}>
+        <Text id='' style={estilo.Text}>
             {children}
         </Text>
     );
