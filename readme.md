@@ -13,7 +13,7 @@ usando componentes simples e fazendo um bonus de upload de imagem
 
 ## sobre
 
-usamos texts, views, butotns, inputs, tabs, usestates, useeffects, images, imagepickers e mais
+usamos texts, views, butotns, inputs, tabs, usestates, useeffects, images, atributos, estilos e mais
 
 ## notas
 
