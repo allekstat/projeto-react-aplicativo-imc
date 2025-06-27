@@ -26,10 +26,16 @@ export default function Perfil() {
       allowsEditing: true,
       aspect: [1, 1],
     });
+        if (result.assets)
+        {
+            const { uri } = result.assets[0];
+            setImageUri(uri);
+            localStorage.setItem('imagem-perfil', uri);
+        }
 
 
   }
-
+    useEffect(() => setImageUri(localStorage.getItem('imagem-perfil')), []);
   return (
     <CustomView>
       <CustomForm>
@@ -93,6 +99,7 @@ const styles = StyleSheet.create({
   },
   placeholderText: {
     color: '#008080',
+    textAlign: 'center'
   },
   buttonWrapper: {
     width: 180,
